@@ -4,35 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>تحدٍّ في واحة الكلمات</title>
-  <meta name="description" content="صديقك تحدّاك في لعبة واحة الكلمات — حلّ المستوى أسرع منه!">
+  <meta name="description" content="صديقك تحدّاك في لعبة واحة الكلمات. حلّ المستوى أسرع منه!">
   <meta property="og:title" content="تحدٍّ في واحة الكلمات">
-  <meta property="og:description" content="صديقك تحدّاك — حلّ المستوى أسرع منه!">
-  <style>
-    :root { --night: #0d1330; --night2: #1a2352; --gold: #f5c451; --sand: #fbefd5; }
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif; color: #fff;
-      background: radial-gradient(120% 70% at 50% 0%, #3a2c6b 0%, var(--night2) 45%, var(--night) 100%); }
-    main { width: 100%; max-width: 420px; text-align: center; }
-    h1 { color: var(--gold); font-size: 2rem; margin: 0 0 8px; }
-    p { color: var(--sand); line-height: 1.7; margin: 0 0 16px; }
-    .code { display: inline-block; font-size: 1.8rem; font-weight: 800; letter-spacing: 4px; direction: ltr;
-      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 14px; padding: 8px 18px; margin-bottom: 20px; }
-    a.btn { display: block; margin: 10px 0; padding: 14px; border-radius: 16px; font-weight: 800; text-decoration: none; font-size: 1.05rem; }
-    .open { background: linear-gradient(#ffe08a, var(--gold) 55%, #d9962b); color: #2a1e14; }
-    .store { background: rgba(255,255,255,.1); color: #fff; border: 1px solid rgba(255,255,255,.2); }
-    small { color: rgba(255,255,255,.6); display: block; margin-top: 14px; line-height: 1.6; }
-  </style>
+  <meta property="og:description" content="صديقك تحدّاك. حلّ المستوى أسرع منه!">
+  <link rel="stylesheet" href="site.css">
 </head>
-<body>
+<body class="share">
 <main>
   <h1>واحة الكلمات</h1>
   <p>صديقك تحدّاك! حلّ نفس المستوى أسرع منه لتفوز.</p>
-  <div class="code" id="code">—</div>
-  <a class="btn open" id="open" href="#">افتح التحدي في اللعبة</a>
-  <a class="btn store" href="https://play.google.com/store/apps/details?id=com.otaqi.wordoasis">حمّل اللعبة من Google Play</a>
-  <a class="btn store" href="https://apps.apple.com/app/id6824796517">حمّلها من App Store</a>
-  <small>بعد تثبيت اللعبة: افتح «الساحة» ← «التحديات» واكتب الرمز أعلاه.</small>
+  <div class="code" id="code">؟</div>
+  <a class="btn btn-open" id="open" href="#">افتح التحدي في اللعبة</a>
+  <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.otaqi.wordoasis">حمّلها من Google Play</a>
+  <a class="btn btn-store" href="https://apps.apple.com/app/id6824796517">حمّلها من App Store</a>
+  <small>بعد تثبيت اللعبة افتح «الساحة» ثم «التحديات» واكتب الرمز أعلاه.</small>
 </main>
 <script>
   // Only the 8-character share alphabet is accepted, so nothing from the URL reaches the page unchecked.
