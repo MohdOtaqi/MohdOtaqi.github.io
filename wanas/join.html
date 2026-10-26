@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join a Wanas family circle</title>
+<style>
+  :root { --ink:#1E2A2F; --teal:#1F6F68; --bg:#FBF6EE; --mute:#56656A; --sun:#FCEFC9; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 system-ui, "Segoe UI", Tahoma, sans-serif; text-align:center; }
+  main { max-width:520px; margin:0 auto; padding:48px 16px; }
+  h1 { color:var(--teal); font-size:26px; }
+  .code { font-size:34px; font-weight:800; letter-spacing:6px; background:var(--sun); border-radius:18px; padding:16px; margin:20px 0; direction:ltr; }
+  a.btn { display:block; background:var(--teal); color:#fff; text-decoration:none; padding:16px; border-radius:30px; font-weight:700; margin:12px 0; }
+  a.alt { background:#fff; color:var(--teal); border:2px solid var(--teal); }
+  p { color:var(--mute); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Join the family circle<br><span dir="rtl">انضم إلى دائرة العائلة</span></h1>
+  <p>Open Wanas, go to Family, tap “I’m a caregiver” and enter this code.</p>
+  <p dir="rtl">افتح وَنَس، ثم «العائلة»، ثم «أنا من يرعى» وأدخل هذا الرمز.</p>
+  <div class="code" id="code">-</div>
+  <a class="btn" id="open" href="#">Open in Wanas · افتح في وَنَس</a>
+  <a class="btn alt" href="https://play.google.com/store/apps/details?id=com.otaqi.wanas">Get Wanas on Google Play</a>
+</main>
+<script>
+  var c = (new URLSearchParams(location.search).get('c') || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
+  document.getElementById('code').textContent = c ? (c.length === 8 ? c.slice(0, 4) + ' ' + c.slice(4) : c) : '-';
+  document.getElementById('open').href = 'wanas://join?c=' + encodeURIComponent(c);
+</script>
+</body>
+</html>
